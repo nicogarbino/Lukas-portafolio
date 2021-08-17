@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #121212;
+
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.loader {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #423F3E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    user-select: none;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+    z-index: 99;
+}
+
+.loader:hover {
+    background: #00B7C2;
+    color: white;
+    box-shadow: 0 0 5px #00B7C2,
+    0 0 25px #00B7C2,
+    0 0 50px #00B7C2,
+    0 0 200px #00B7C2;
+
+}
+
+.loader span {
+    position: absolute;
+    display: block;
+}
+
+.loader span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #00B7C2);
+    animation: animate1 2s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes animate1
+{
+    0%{left: -100%;}
+    50%, 100% {left: 100%;}
+}
+
+.loader span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent, #00B7C2);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate3
+{
+    0%{right: -100%;}
+    50%, 100% {right: 100%;}
+}
+
+.loader span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #00B7C2);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate2
+{
+    0%{top: -100%;}
+    50%, 100% {top: 100%;}
+}
+
+.loader span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #00B7C2);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes animate4
+{
+    0%{bottom: -100%;}
+    50%, 100% {bottom: 100%;}
+}
+
+.loader a{
+    
+    color: #00B7C2;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    animation: typing 5s steps(6) infinite;
+    text-decoration: none;
+
+    
+}
+
+.loader:hover a{
+    color: #111;   
+    cursor: pointer; 
+    border-right: 1px solid #111;   
+}
+
+@keyframes typing {
+    0%, 90%, 100%{width: 0px;}
+    30%, 60% {width: 73px;}
+}
+
+.loader:active {
+    background: #00B7C2;
+    transform: scale(0.9);
+    transition: all 0.6s ease-out;        
+    
+}
+
