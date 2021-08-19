@@ -15,14 +15,13 @@
 <body>
     <header>
         <a href="#" class="logo" id="portafolio">Portafolio</a>
-        <div class="toggle">
-            <ul>
-                <li><a class="amen" href="#home">Inicio</a></li>
-                <li><a class="amen" href="#about">Sobre Mi</a></li>
-                <li><a class="amen" href="#formacion">Formación</a></li>
-                <li><a class="amen" href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
+        <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a class="amen" href="#home" onclick="toggleMenu();">Inicio</a></li>
+                <li><a class="amen" href="#about" onclick="toggleMenu();">Sobre Mi</a></li>
+                <li><a class="amen" href="#formacion" onclick="toggleMenu();">Formación</a></li>
+                <li><a class="amen" href="#contacto" onclick="toggleMenu();">Contacto</a></li>
+            </ul>        
     </header>
     <section class="banner" id="home">
         <div class="textBx">
